@@ -5,7 +5,7 @@ cpp_files=`ls *.cpp`
 # Clean main should work
 ./oclint-0.10.3/bin/oclint -o oclint.log \
   $cpp_files \
-  -- -c -std=c++11
+  -- -c -std=c++14
 
 cat oclint.log
 
