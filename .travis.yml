@@ -11,7 +11,6 @@ install:
   # C++14
   - sudo apt-get install -qq g++-5 
   # OCLint
-  - sudo apt-get install -qq libstdc++6-4.7-dev 
   - ./install_oclint.sh
 
 script: 
