@@ -3,21 +3,20 @@ compiler: gcc
 sudo: required
 
 before_install:
+  # C++14
   - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get install -qq g++-5 # C++14
-  - sudo apt-get install -qq libstdc++6-4.7-dev # OCLint
+  # C++14
+  - sudo apt-get install -qq g++-5 
+  # OCLint
+  - sudo apt-get install -qq libstdc++6-4.7-dev 
   - ./install_oclint.sh
 
 script: 
-  - ./build.sh
-  - ./do_oclint.sh
+  - qmake
+  - make
   - ./travis_qmake_gcc_cpp14_oclint
-
-after_success:
-  - cat oclint.log
-
-after_failure:
-  - cat oclint.log
+  # OCLint
+  - ./do_oclint.sh
