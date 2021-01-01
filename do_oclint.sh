@@ -11,9 +11,10 @@
 cpp_files=$(ls *.cpp)
 
 # Clean main should work
-./oclint-20.11/bin/oclint -o oclint.log \
+./oclint-0.10.3/bin/oclint -o oclint.log \
   $cpp_files \
-  -- -c -std=c++14
+  -- -c --std=c++14 \
+  -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9
 
 cat oclint.log
 
