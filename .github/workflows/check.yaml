@@ -13,12 +13,6 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
 
-      - name: Search libtinfo
-        run: apt search libtinfo
-  
-      - name: install libtinfo (for OCLint)
-        run: sudo apt install libtinfo
-
       - name: install OCLint
         run: ./install_oclint.sh
 
