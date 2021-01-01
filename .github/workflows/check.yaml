@@ -14,8 +14,7 @@ jobs:
         uses: jurplel/install-qt-action@v2
 
       - name: install libtinfo-dev (for OCLint)
-        run: sudo apt install libtinfo6
-
+        run: sudo apt install libtinfo
 
       - name: install OCLint
         run: ./install_oclint.sh
