@@ -5,6 +5,7 @@ compiler: gcc
 install: 
   - sudo apt update -qq
   # OCLint
+  - apt search libtinfo
   - sudo apt install libtinfo
   - ./install_oclint.sh
 
