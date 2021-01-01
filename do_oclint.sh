@@ -26,10 +26,10 @@ fail=$(egrep "Compiler Errors" oclint.log | wc -l)
 # one can be strict (by using 'exit 1') or mild (by removing that line)
 if [ $fail -eq 1 ]; 
 then
-  echo "OCLint: Compiler error"
-  exit 1
+  echo "OCLint: Compiler errors detected"
+  # exit 1 # Be mild
 else
-  echo "OCLint: OK"
+  echo "OCLint: No compiler errors detected"
 fi
 
 # Will be 1 if success
